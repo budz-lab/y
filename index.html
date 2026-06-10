@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>WebGIS Jangkauan Pelayanan SD</title>
+
+<link rel="stylesheet"
+href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link rel="stylesheet"
+href="css/style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<div id="sidebar">
+
+<div class="header">
+
+<h2>
+WebGIS Pelayanan SD
+</h2>
+
+<p>
+Analisis Jangkauan Pelayanan Sekolah Dasar
+</p>
+
+</div>
+
+<div class="panel">
+
+<h3>Dashboard</h3>
+
+<div class="statBox">
+<h4>Total Sekolah</h4>
+<p id="jumlahSekolah">0</p>
+</div>
+
+<div class="statBox">
+<h4>Total Kelurahan</h4>
+<p id="jumlahKelurahan">0</p>
+</div>
+
+<div class="statBox">
+<h4>Rata-rata Pelayanan</h4>
+<p id="rataPelayanan">0%</p>
+</div>
+
+</div>
+
+<div class="panel">
+
+<h3>Pencarian Sekolah</h3>
+
+<input
+type="text"
+id="searchInput"
+placeholder="Cari sekolah...">
+
+</div>
+
+<div class="panel">
+
+<h3>Filter Status</h3>
+
+<select id="statusFilter">
+
+<option value="all">
+Semua
+</option>
+
+<option value="NEGERI">
+Negeri
+</option>
+
+<option value="SWASTA">
+Swasta
+</option>
+
+</select>
+
+</div>
+
+<div class="panel">
+
+<h3>Grafik Pelayanan</h3>
+
+<canvas id="chartPelayanan"></canvas>
+
+</div>
+
+<div class="panel">
+
+<h3>Legenda</h3>
+
+<div><span class="legend sekolah"></span> Sekolah</div>
+<div><span class="legend kelurahan"></span> Kelurahan</div>
+<div><span class="legend jangkauan"></span> Jangkauan</div>
+<div><span class="legend jalan"></span> Jalan</div>
+
+</div>
+
+</div>
+
+<div id="map"></div>
+
+<div id="coordinate">
+X : -
+<br>
+Y : -
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@turf/turf@6/turf.min.js"></script>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>
